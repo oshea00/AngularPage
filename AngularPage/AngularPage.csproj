@@ -170,6 +170,7 @@
     <Content Include="Content\images\sort-asc.gif" />
     <Content Include="Content\images\sort-desc.gif" />
     <Content Include="Content\images\unicorn.png" />
+    <Content Include="Content\services\EventData.js" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -274,7 +275,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\services\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
