@@ -33,7 +33,7 @@
                         <input id="eventDate" type="text" required ng-pattern="/\d\d/\d\d/\d\d\d\d/" ng-model="event.date" placeholder="format {mm/dd/yyyy}..." />
                         <label for="eventTime">Event Time:</label>
                         <input id="eventTime" type="text" ng-model="event.time" placeholder="start and end time..." />
-                        <label for="eventLocation">Event Time:</label>
+                        <label for="eventLocation">Event Location:</label>
                         <input id="eventLocation" type="text" ng-model="event.location.address" placeholder="Address of event..." />
                         <br />
                         <input id="eventCity" type="text" ng-model="event.location.city" placeholder="City..." />
@@ -59,7 +59,6 @@
     <script src="~/Scripts/underscore.js"></script>
     <script src="~/Scripts/angular.js"></script>
     <script src="~/Scripts/app.js"></script>
-    <script src="~/Content/controllers/EventController.js"></script>
     <script src="~/Content/controllers/EditEventController.js"></script>
 </body>
 </html>
