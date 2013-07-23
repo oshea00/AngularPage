@@ -1,35 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http;
 using System.Web;
-using System.Web.Mvc;
 
 namespace AngularPage.Controllers
 {
-    public class HomeController : Controller
+    public class EventController : ApiController
     {
-        //
-        // GET: /Home/
-
-        public ActionResult Index()
+        // GET api/event
+        public IEnumerable<Event> Get()
         {
-            return View();
+            throw new NotImplementedException();
         }
 
-        public ActionResult AddEvent()
+        // GET api/event/5
+        public Event Get(int id)
         {
-            return View();
-        }
-
-
-        public JsonResult GetEvent(int id)
-        {
-            var myevent = new Event { 
+            var myevent = new Event
+            {
                 name = "Angular Boot Camp",
                 date = DateTime.Now,
                 time = "10:30 am",
                 rating = 3.2,
-                location = new Location { 
+                location = new Location
+                {
                     address = "Google Headquarters",
                     city = "Mountain View",
                     province = "CA",
@@ -57,8 +54,25 @@ namespace AngularPage.Controllers
                 }
             };
 
-            return Json(myevent,JsonRequestBehavior.AllowGet);
+            return myevent;
+        }
 
+        // POST api/event
+        public void Post(Event newevent)
+        {
+            // Add code to save event
+        }
+
+        // PUT api/event/5
+        public void Put(int id, [FromBody]Event value)
+        {
+            // Add code to update event
+        }
+
+        // DELETE api/event/5
+        public void Delete(int id)
+        {
+            // Add code to delete event
         }
     }
 }

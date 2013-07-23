@@ -30,7 +30,7 @@
             </div>
             <div class="row">
                 <div class="span3">
-                    <div><strong>Date: </strong>{{ event.date | date:'MM-dd-yyyy' }}</div>
+                    <div><strong>Date: </strong>{{ event.date | aspdate2jsdate | date:'MM-dd-yyyy' }}</div>
                     <div><strong>Time: </strong>{{event.time}}</div>
                     <div><strong>Rating: </strong>{{event.rating | number:2 }}</div>
                 </div>
@@ -86,7 +86,9 @@
     <script src="~/Scripts/jquery-1.8.2.js"></script>
     <script src="~/Scripts/bootstrap.js"></script>
     <script src="~/Scripts/underscore.js"></script>
+    <script src="~/Scripts/json3.js"></script>
     <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/angular-resource.js"></script>
     <script src="~/Scripts/app.js"></script>
     <script src="~/Content/controllers/EventController.js"></script>
     <script src="~/Content/services/EventData.js"></script>

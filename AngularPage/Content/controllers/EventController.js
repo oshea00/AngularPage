@@ -7,13 +7,30 @@ eventsApp.filter('firstupper', function () {
     }
 });
 
+eventsApp.filter('aspdate2jsdate', function () {
+    return function (input) {
+        if (input) {
+            var jsDate = new Date(parseInt(input.substr(6)));
+            return jsDate;
+        }
+        return "";
+    }
+});
+
 
 eventsApp.controller('EventController',
-    function EventController($scope,eventData) {
+    function EventController($scope,restEventData,$log) {
 
         $scope.sortOrder = 'name';
         $scope.query = '';
-        $scope.event = eventData.event;
+
+        $scope.event = restEventData.getEvent();
+
+        // show the returned promise from getEvent
+        $scope.event.then(
+            function (event) { $log.log(event); },
+            function (response) { $log.log(response); }
+            );
 
         $scope.upVoteSession = function (session) {
             session.upVoteCount++;

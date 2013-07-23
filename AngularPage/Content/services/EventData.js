@@ -1,5 +1,6 @@
 ﻿'use strict';
 
+// Earlier example that returned some example data
 eventsApp.factory('eventData', function () {
     return {
         event: {
@@ -36,3 +37,51 @@ eventsApp.factory('eventData', function () {
         }
     };
 });
+
+// Example: Using this now to get example data from controller
+eventsApp.factory('getEventData', function ($http,$q) {
+    return {
+        getEvent: function () {
+            var deferred = $q.defer();
+            $http({method: 'POST', url: '/Home/getevent/1'})
+                .success(function (data, status, headers, config) {
+                    deferred.resolve(data);
+                })
+                .error(function (data, status, headers, config) {
+                    $log.log(data, status, headers, config);
+                    deferred.reject(status);
+                });
+            return deferred.promise;
+        }
+    };
+});
+
+// Example: Using this now to get example data from controller - via $resource service
+eventsApp.factory('restEventData', function ($resource,$q) {
+    var resource = $resource('/api/Event/:id', { id: '@id' });
+    return {
+        getEvent: function () {
+            var deferred = $q.defer();
+                resource.get({ id: 1 },
+                function (event) {
+                    deferred.resolve(event);
+                },
+                function (response) {
+                    $log.log(data, status, headers, config);
+                    deferred.reject(status);
+                });
+            return deferred.promise;
+        },
+        save: function (event) {
+            var deferred = $q.defer();
+            event.id = 999;
+            resource.save(event,
+                function (response) { deferred.resolve(response); },
+                function (response) { deferred.reject(response); }
+            );
+            return deferred.promise;
+        }
+    };
+});
+
+
