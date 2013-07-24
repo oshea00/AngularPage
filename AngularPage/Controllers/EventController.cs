@@ -21,6 +21,7 @@ namespace AngularPage.Controllers
         {
             var myevent = new Event
             {
+                id = 1,
                 name = "Angular Boot Camp",
                 date = DateTime.Now,
                 time = "10:30 am",
@@ -34,6 +35,7 @@ namespace AngularPage.Controllers
                 imageUrl = "/Content/images/russell_logo.gif",
                 sessions = new List<Session> {
                     new Session { 
+                        id = 1,
                         name = "Directives Masterclass Beginner",
                         creatorName = "Mike O'Shea",
                         duration = "1 hour",
@@ -41,12 +43,14 @@ namespace AngularPage.Controllers
                         description = "This is a sample description for the session abstract",
                         upVoteCount = 10,
                     },
-                    new Session { 
+                    new Session {
+                        id = 2,
                         name = "scopes for fun and profit",
                         level = "beginner",
                         upVoteCount = 0,
                     },
-                    new Session { 
+                    new Session {
+                        id = 3,
                         name = "well-behaved Controllers",
                         level = "advanced",
                         upVoteCount = 0,

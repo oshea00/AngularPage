@@ -7,6 +7,7 @@ namespace AngularPage
 {
     public class Event
     {
+        public int id { get; set; }
         public string name { get; set; }
         public DateTime date { get; set; }
         public string time { get; set; }
@@ -25,6 +26,7 @@ namespace AngularPage
 
     public class Session
     {
+        public int id { get; set; }
         public string name { get; set; }
         public string creatorName { get; set; }
         public string duration { get; set; }

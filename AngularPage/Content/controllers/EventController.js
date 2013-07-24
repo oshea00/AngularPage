@@ -19,7 +19,7 @@ eventsApp.filter('aspdate2jsdate', function () {
 
 
 eventsApp.controller('EventController',
-    function EventController($scope,restEventData,$log) {
+    function EventController($scope,restEventData,$log,$anchorScroll) {
 
         $scope.sortOrder = 'name';
         $scope.query = '';
@@ -39,4 +39,8 @@ eventsApp.controller('EventController',
         $scope.downVoteSession = function (session) {
             session.upVoteCount--;
         };
+
+        $scope.scrollToSession = function () {
+            $anchorScroll();
+        }
     });
