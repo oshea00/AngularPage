@@ -15,5 +15,4 @@ eventsApp.controller('CacheSampleController',
             return myCache.info();
         };
 
-    }
-);
+});

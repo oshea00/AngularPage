@@ -1,0 +1,34 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html ng-app="eventsApp">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/app.css" rel="stylesheet" />
+    <title>Cookie Sample</title>
+</head>
+<body>
+    <div class="container">
+        <div ng-controller="CookieSampleController" class="padded">
+            <h3>{{getEventFromCookie()}}</h3>
+            <button type="button" class="btn" ng-click="saveEventToCookie(event)">Store Cookie</button>
+            <button type="button" class="btn" ng-click="removeEventCookie()">Remove Cookie</button>
+        </div>
+        
+    </div>
+
+    <script src="~/Scripts/jquery-1.8.2.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/underscore.js"></script>
+    <script src="~/Scripts/json3.js"></script>
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/angular-resource.js"></script>
+    <script src="~/Scripts/angular-cookies.js"></script>
+    <script src="~/Scripts/app.js"></script>
+    <script src="~/Content/controllers/CookieSampleController.js"></script>
+
+</body>
+</html>

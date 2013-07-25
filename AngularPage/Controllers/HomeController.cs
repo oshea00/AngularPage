@@ -25,5 +25,10 @@ namespace AngularPage.Controllers
         {
             return View();
         }
+
+        public ActionResult CookieSample()
+        {
+            return View();
+        }
     }
 }

@@ -10,7 +10,7 @@
 //}
 
 // Register application module
-var eventsApp = angular.module('eventsApp', ['ngResource'])
+var eventsApp = angular.module('eventsApp', ['ngResource','ngCookies'])
     .factory('myCache', function ($cacheFactory) {
         return $cacheFactory('myCache', { capacity: 3 });
     });

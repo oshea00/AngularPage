@@ -138,6 +138,7 @@
     <Content Include="Content\app.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\controllers\CacheSampleController.js" />
+    <Content Include="Content\controllers\CookieSampleController.js" />
     <Content Include="Content\controllers\EditEventController.js" />
     <Content Include="Content\controllers\EventController.js" />
     <Content Include="Content\images\actions.gif" />
@@ -276,6 +277,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\AddEvent.cshtml" />
     <Content Include="Views\Home\CacheSample.cshtml" />
+    <Content Include="Views\Home\CookieSample.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

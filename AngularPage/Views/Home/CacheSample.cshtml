@@ -14,7 +14,7 @@
 <body ng-cloak>
     
     <div class="container">
-        <div ng-controller="CacheSampleController" style="padded">
+        <div ng-controller="CacheSampleController" class="padded">
             key : <input type="text" ng-model="key" /><br />
             value: <input type="text" ng-model="value" /><br />
             <button type="button" class="btn" ng-click="addToCache(key,value)">Add To Cache</button>
@@ -35,6 +35,7 @@
     <script src="~/Scripts/json3.js"></script>
     <script src="~/Scripts/angular.js"></script>
     <script src="~/Scripts/angular-resource.js"></script>
+    <script src="~/Scripts/angular-cookies.min.js"></script>
     <script src="~/Scripts/app.js"></script>
     <script src="~/Content/controllers/CacheSampleController.js"></script>
 </body>
